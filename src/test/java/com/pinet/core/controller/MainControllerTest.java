@@ -8,6 +8,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 
+
 import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,11 +23,14 @@ public class MainControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
+
     @Test
     public void getHello() throws Exception {
 
         ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/helow").toString(), String.class);
-        assertEquals("Hello Controller 123", response.getBody());
+        assertEquals("200 OK", response.getStatusCode().toString());
+        //assertEquals( "Hello World on DEV", response.getBody());
+
 
     }
 

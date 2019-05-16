@@ -10,7 +10,8 @@ public class MainController {
     @ResponseBody
     @GetMapping("/helow")
     public String hello() {
-        return "Hello Controller 123";
+        String env = System.getenv("ENV");
+        return " “Hello World on "+env;
     }
 
 }

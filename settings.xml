@@ -1,0 +1,7 @@
+<servers>
+    <server>
+        <id>192.168.57.30:5000</id>
+        <username>fendi</username>
+        <password>1234</password>
+    </server>
+</servers>
