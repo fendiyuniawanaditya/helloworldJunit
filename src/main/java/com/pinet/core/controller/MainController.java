@@ -11,7 +11,7 @@ public class MainController {
     @GetMapping("/helow")
     public String hello() {
         String env = System.getenv("ENV");
-        return " “Hello World on "+env;
+        return " Hello World on "+env;
     }
 
 }
